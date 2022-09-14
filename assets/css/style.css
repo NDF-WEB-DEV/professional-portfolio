@@ -10,292 +10,237 @@ h1 h2 h3 h4 h5 h6 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 main {
-    display: inline;
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 2%;
 }
 
-/** NORDLEEN DE FRIAS **/
+/** header - Logo Section --------------------------- **/
 header{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* padding: 0px 0px 0px 0px; */
-    /* margin: 0px 0px 0px 0px; */
-    /* text-align: right;
-    padding-right: 10px;
-    position: absolute;
-    background: #78b3cc;
-    color: #fff;
-    width: 25%;
-    height: 40px; */
 }
 header h1 {
-    top: -10px;
-    left: 0px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: right;
-    padding-right: 10px;
-    position: absolute;
-    background:  #33adff;
-    color: #fff;
-    height: 50px;
-    width: 425px;
-    border-radius: 0px 10px 10px 0px;
-    /* position: relative; */
-    /* top: -30px; */
-    /* right: 16px; */
-    /* position: absolute;
-    bottom: 20px;
-    right: 20px; */
-    /* background-color: black; */
-    /* color: white; */
-    /* padding-left: 20px;
-    padding-right: 20px; */
+  display: flex;
+  justify-content: flex-end;
+  flex-direction:row;
+  top: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-right: 10px;
+  position: absolute;
+  background: #33adff;
+  color: #fff;
+  height: 39px;
+  width: 350px;
+  font-size: 36px;
+  font-weight: 600;
+  border-radius: 0px 10px 10px 0px;
+}
+/*  Uncomment code on index to use */
+header img {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  height: auto;
+  margin: 10px;
 }
 
-/* header a {
-    text-align: right;
-    color:#fff;
-} */
-
-/** ------------------------ NAVIGATION BAR ------------------------ **/
+/** Nav Bar ------------------------ **/
 nav {
-    font-size: 24px;
     display: flex;
-    background-color: #ee438b;
-    flex-direction: row;
     flex-wrap: wrap;
-    /* position: absolute; */
-    width: 100%;
-    /* padding: 20px 5px 20px 5px; */
+    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    font-size: 24px;
+    background-color: #ee438b;
+    width: auto;
     height: 80px;
   }
   
   nav a {
     color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
+    padding: 20px 20px;
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-decoration-color: #78b3cc;
     text-underline-offset: 5px;
   }
-/** ----------------------------------------------------------------- **/
 
-img {
-    width: 100%;
-    height: auto;
-}
+/** Hero Section ------------------------ **/
 .hero {
-    /* background-image: url("./assets/images/header-web-dev.png");
-    height: 100%; */
+    display: flex;
     background-size: cover;
     width: 100%;
     height: auto;
 }
 .hero img {
+    display: flex;
+    justify-content:right;
     width: 100%;
     height: auto;
     position: relative;
 }
 .hero h3 {
-    top: 225px;
-    right: 0px;
-    bottom: auto;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
-    padding-left: 10px;
+    display: flex-end;
     position: absolute;
-    background: #70dbdb;
+    top: 250px;
+    right: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: #70dbdb;
     color: #fff;
     height: 30px;
     width: 375px;
     border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
 }
 
-/** back-up **/
-/* aside {
-    flex: 1;
-    background-color: #fff;
-    padding: 10px;
-  } */
-
-  /* aside h2 {
-    color:black;
-    text-align: right;
-    font-weight: 400;
-    border-right: 3px solid black;
-    height: auto;
-  } */
-
-/** ---------------- About Me Section ---------------- **/
+/** About Section ---------------- **/
   .resume-section {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
   }
-
-  .about-me {
+  .resume-section .about-me {
+    display: flex-end;
     flex: 1;
-    /* border: 2px solid yellow; */
     width: 10%;
-    margin-right: 20px;
-    /* margin-top: 20px; */
-    text-align: right;
-    /* border-right: 3px solid black; */
-    font-weight: 400;
+    margin-right: 10px;
   } 
-  .about-me h2 {
+  .resume-section .about-me h2 {
     color: #33adff;
-    text-align: right;
     font-weight: 400;
     font-size: 48px;
-    /* border-right: 3px solid black;
-    height: auto; */
+    text-align: right;
   }
-  .about-me-content {
+  .resume-section .about-me-content {
     flex: 2;
-    /* border: 2px solid yellow; */
     width: 90%;
     margin-right: 20px;
-    color: #696969;
-    text-align: left;
-    font-weight: 300;
-    /* padding-left: 20px; */
   }
-
-  .about-me-content p {
+  .resume-section .about-me-content p {
+    color: #696969;
     border-left: 3px solid #33adff;
     height: auto;
     padding-left: 20px;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: justify;
   }
-  .about-me-content h2 {
-    color:black;
-    text-align: right;
-    font-weight: 400;
-    font-size: 40px !important;
-    /* border-right: 3px solid black;
-    height: auto; */
-  }
-/** ---------------------------------------------- **/
-
 /** ---------------- Work Section ---------------- **/
 .work-section {
     display: flex;
-    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
 }
-
-.work {
+.work-section .work {
     flex: 1;
-    /* border: 2px solid yellow; */
     width: 10%;
     margin-right: 20px;
-    /* margin-top: 20px; */
-    color:black;
-    text-align: right;
-    font-weight: 400;
-  } 
-  .work h2 {
+  }
+  .work-section .work h2 {
     color: #33adff;
-    text-align: right;
     font-weight: 400;
     font-size: 48px;
-    /* border-right: 3px solid black;
-    height: auto; */
+    text-align: right;
   }
-  .work-content {
+  .work-section .work-content {
+    display: flex;
+    flex-wrap: wrap;
     flex: 2;
-    /* border: 2px solid yellow; */
     width: 90%;
     margin-right: 20px;
-    color:black;
-    text-align: left;
-    font-weight: 300;
     border-left: 3px solid #33adff;
-    height: auto;
     padding-left: 20px;
   }
 
-  .work-content p {
-    border-left: 3px solid #33adff;
-    height: auto;
-    padding-left: 20px;
+  .work-section .work-content .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* width: 50%;
+    height: auto; */
   }
-
-  /* .work-content img {
-    border-left: 3px solid black;
-    height: auto;
-    padding-left: 20px;
-  } */
-  .work-content img {
+  .work-section .work-content .img-container img {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-.work-content img #half {
-    width: 50%;
-    height: auto;
-    border-radius: 10px;
-}
-  .bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
+    padding: 5px;
   }
-/** ---------------- Contact Me Section ---------------- **/
+  .work-section .work-content .img-container .img-titles {
+    background-color: #ee438b;
+    border-radius: 0px 10px 0px 10px;
+    padding: 10px;
+    width: 200px;
+  }
+  .work-section .work-content .img-container .img-titles h4 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+    bottom: 0px;
+    left: 0px;
+  }
+  .work-section .work-content .img-container .img-titles p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+    bottom: 0px;
+    left: 0px;
+  }
+
+/** ---------------- Contact Section ---------------- **/
 .contact-section {
-    display: flex;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
 }
-
-.contact {
-    flex: 1;
-    /* border: 2px solid yellow; */
-    width: 10%;
-    margin-right: 20px;
-    /* margin-top: 20px; */
-    color:black;
-    text-align: right;
-    font-weight: 400;
+.contact-section .contact-title {
+  display: flex-end;
+  flex: 1;
+  width: 10px;
+  margin-right: 10px;
   } 
-
-.contact-content {
+.contact-section .contact-title h2{
+  color: #33adff;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: right;
+}  
+.contact-section .contact-content {
     flex: 2;
-    /* border: 2px solid yellow; */
-    width: 10%;
-    margin-right: 20px;
-    margin-top: 20px;
-    color:black;
-    text-align: right;
+    width: 90%;
+    text-align: left;
     font-weight: 400;
     border-left: 3px solid #33adff;
     height: auto;
     padding-left: 20px;
   } 
-
-  .contact h2 {
-    color: #33adff;
-    text-align: right;
-    font-weight: 400;
-    font-size: 48px;
-  }
   .contact-section .contact-content nav {
     font-size: 24px;
     display: flex;
     background-color: #fff;
-    flex-direction: row;
     flex-wrap: wrap;
-    /* position: absolute; */
-    width: 100%;
-    /* padding: 20px 5px 20px 5px; */
     align-items: center;
-    justify-content: left;
-    height: 80px;
+    justify-content: flex-start;
+    height: auto;
+    align-content: center;
+    width: max-content;
   }
 
   .contact-section .contact-content nav a{
     color: #ee438b;
-    padding: 14px 20px;
-    margin-right: 100px;
+    /* padding: 14px 20px; */
+    /* margin-right: 100px; */
     text-decoration: none;
     text-align: center;
     text-decoration: underline;
@@ -324,9 +269,7 @@ footer nav {
     background-color: #ee438b;
     flex-direction: row;
     flex-wrap: wrap;
-    /* position: absolute; */
     width: 100%;
-    /* padding: 20px 5px 20px 5px; */
     align-items: center;
     justify-content: flex-end;
     height: 80px;
@@ -350,4 +293,37 @@ footer a {
     text-decoration-thickness: 1px;
     text-decoration-color: #78b3cc;
     text-underline-offset: 5px;
+}
+
+@media screen and (max-width: 1024) {
+
+}
+  
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  main,
+  nav {
+    flex-direction: column;
+  }
+  /* Change the header background */
+  header {
+    background: #fff;
+  }
+  /* Change the navbar and footer background */
+  nav,
+  footer {
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+}
+
+@media screen and (max-width: 375px) {
+  
+}
+
+@media screen and (max-width: 320px) {
+  
 }
