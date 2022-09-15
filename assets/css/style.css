@@ -2,12 +2,8 @@
     box-sizing: border-box;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 body {
     margin: 0;
-}
-h1 h2 h3 h4 h5 h6 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 main {
     display: flex;
@@ -16,20 +12,22 @@ main {
 
 /** header - Logo Section --------------------------- **/
 header{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  width: 100%;
 }
 header h1 {
   display: flex;
-  justify-content: flex-end;
+  justify-content:flex-start;
   flex-direction:row;
-  top: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-right: 10px;
+  align-items:flex-start;
   position: absolute;
-  background: #33adff;
+  top: 15px;
+  padding: 7px 0px 0px 50px;
+  background-color: #33adff;
   color: #fff;
-  height: 39px;
+  height: 50px;
   width: 350px;
+  text-align: right;
   font-size: 36px;
   font-weight: 600;
   border-radius: 0px 10px 10px 0px;
@@ -75,7 +73,7 @@ nav {
 }
 .hero img {
     display: flex;
-    justify-content:right;
+    justify-content: left;
     width: 100%;
     height: auto;
     position: relative;
@@ -88,13 +86,13 @@ nav {
     padding-left: 10px;
     padding-top: 5px;
     background-color: #70dbdb;
-    color: #fff;
+    font-weight: 400;
+    color: black;
     height: 30px;
-    width: 375px;
+    width: 250px;
     border-radius: 10px 0px 0px 10px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.4);
 }
-
 /** About Section ---------------- **/
   .resume-section {
     display: flex;
@@ -161,28 +159,30 @@ nav {
   .work-section .work-content .img-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     position: relative;
-    /* width: 50%;
-    height: auto; */
+    width: 50%;
   }
   .work-section .work-content .img-container img {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: auto;
     border-radius: 10px;
     padding: 5px;
   }
   .work-section .work-content .img-container .img-titles {
     background-color: #ee438b;
-    border-radius: 0px 10px 0px 10px;
+    border-radius: 0px 0px 10px 0px;
     padding: 10px;
-    width: 200px;
+    width: 220px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
   }
   .work-section .work-content .img-container .img-titles h4 {
     font-size: 26px;
     color: #fff;
-    font-weight: 300;
+    font-weight: 400;
     text-align: left;
     bottom: 0px;
     left: 0px;
@@ -207,7 +207,7 @@ nav {
 .contact-section .contact-title {
   display: flex-end;
   flex: 1;
-  width: 10px;
+  width: 10%;
   margin-right: 10px;
   } 
 .contact-section .contact-title h2{
@@ -230,18 +230,12 @@ nav {
     display: flex;
     background-color: #fff;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: flex-start;
     height: auto;
-    align-content: center;
-    width: max-content;
   }
 
   .contact-section .contact-content nav a{
     color: #ee438b;
-    /* padding: 14px 20px; */
-    /* margin-right: 100px; */
-    text-decoration: none;
     text-align: center;
     text-decoration: underline;
     text-decoration-thickness: 1px;
@@ -251,30 +245,888 @@ nav {
 
 /** ---------------- FOOTER SECTION ----------------- **/
 footer {
-    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    background-color: #ee438b;
+    width: 100%;
+    height: 30px;
+    margin-top: 40px;
+}
+footer nav {
     display: flex;
     background-color: #ee438b;
     flex-direction: row;
     flex-wrap: wrap;
-    position: relative;
-    width: 100%;
-    padding: 20px 5px 20px 5px;
     align-items: center;
     justify-content: flex-end;
+    width: 100%;
+  }
+  footer nav a {
+    font-size: 24px;
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+@media screen and (max-width: 1024px) {
+  /** header - Logo Section --------------------------- **/
+header{
+  display: flex;
+  width: 100%;
+}
+header h1 {
+  display: flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  align-items:flex-start;
+  position: absolute;
+  top: 15px;
+  padding: 7px 0px 0px 50px;
+  background-color: #33adff;
+  color: #fff;
+  height: 50px;
+  width: 350px;
+  text-align: right;
+  font-size: 36px;
+  font-weight: 600;
+  border-radius: 0px 10px 10px 0px;
+}
+/*  Uncomment code on index to use */
+header img {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+
+/** Nav Bar ------------------------ **/
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 24px;
+    background-color: #ee438b;
+    width: auto;
+    height: 80px;
+  }
+  
+  nav a {
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+/** Hero Section ------------------------ **/
+.hero {
+    display: flex;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.hero img {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.hero h3 {
+    display: flex-end;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: #70dbdb;
+    font-weight: 400;
+    color: black;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+/** About Section ---------------- **/
+  .resume-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .resume-section .about-me {
+    display: flex-end;
+    flex: 1;
+    width: 10%;
+    margin-right: 10px;
+  } 
+  .resume-section .about-me h2 {
+    color: #33adff;
+    font-weight: 400;
+    font-size: 48px;
+    text-align: right;
+  }
+  .resume-section .about-me-content {
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+  }
+  .resume-section .about-me-content p {
+    color: #696969;
+    border-left: 3px solid #33adff;
+    height: auto;
+    padding-left: 20px;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: justify;
+  }
+/** ---------------- Work Section ---------------- **/
+.work-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+}
+.work-section .work {
+    flex: 1;
+    width: 10%;
+    margin-right: 20px;
+  }
+  .work-section .work h2 {
+    color: #33adff;
+    font-weight: 400;
+    font-size: 48px;
+    text-align: right;
+  }
+  .work-section .work-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+    border-left: 3px solid #33adff;
+    padding-left: 20px;
+  }
+
+  .work-section .work-content .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+  }
+  .work-section .work-content .img-container img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .work-section .work-content .img-container .img-titles {
+    background-color: #ee438b;
+    border-radius: 0px 0px 10px 0px;
+    padding: 10px;
+    width: 220px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+  }
+  .work-section .work-content .img-container .img-titles h4 {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 400;
+    text-align: left;
+    bottom: 0px;
+    left: 0px;
+  }
+  .work-section .work-content .img-container .img-titles p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+    bottom: 0px;
+    left: 0px;
+  }
+
+/** ---------------- Contact Section ---------------- **/
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+}
+.contact-section .contact-title {
+  display: flex-end;
+  flex: 1;
+  width: 10%;
+  margin-right: 10px;
+  } 
+.contact-section .contact-title h2{
+  color: #33adff;
+  font-weight: 400;
+  font-size: 48px;
+  text-align: right;
+}  
+.contact-section .contact-content {
+    flex: 2;
+    width: 90%;
+    border-left: 3px solid #33adff;
+    height: auto;
+    padding-left: 20px;
+  } 
+  .contact-section .contact-content nav {
+    display: flex;
+    background-color: #fff;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .contact-section .contact-content nav a{
+    color: #ee438b;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+/** ---------------- FOOTER SECTION ----------------- **/
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    background-color: #ee438b;
+    width: 100%;
+    height: 30px;
+    margin-top: 40px;
+}
+footer nav {
+    display: flex;
+    background-color: #ee438b;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+  }
+  footer nav a {
+    font-size: 24px;
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+}
+/** --------------------------- 768 Media Box --------------------------- **/  
+@media screen and (max-width: 768px) {
+/** header - Logo Section --------------------------- **/
+header{
+  display: flex;
+  width: 100%;
+}
+header h1 {
+  display: flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  align-items:flex-start;
+  position: absolute;
+  top: 30px;
+  padding: 4px 0px 0px 50px;
+  background-color: #33adff;
+  color: #fff;
+  height: 25px;
+  width: 250px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 0px 5px 5px 0px;
+}
+/*  Uncomment code on index to use */
+header img {
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
+  height: auto;
+  margin: 5px;
+}
+/** Nav Bar ------------------------ **/
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #036fda;
+  height: 80px;
+  align-content: center;
+  align-items: center;
+  }
+  
+  nav a {
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+/** Hero Section ------------------------ **/
+.hero {
+    display: flex;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.hero img {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.hero h3 {
+    display: flex-end;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: #70dbdb;
+    font-weight: 400;
+    color: black;
+    height: 30px;
+    width: 250px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+/** About Section ---------------- **/
+  .resume-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .resume-section .about-me {
+    display: flex-end;
+    flex: 1;
+    width: 10%;
+    margin-right: 10px;
+  } 
+  .resume-section .about-me h2 {
+    background-color: #036fda;
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    padding: 5px;
+  }
+  .resume-section .about-me-content {
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+  }
+  .resume-section .about-me-content p {
+    color: #696969;
+    border-left: 3px solid #036fda;
+    height: auto;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 25px;
+    text-align: justify;
+  }
+/** ---------------- Work Section ---------------- **/
+.work-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    width: 100%;
+}
+.work-section .work {
+    flex: 1;
+    width: 10%;
+    margin-right: 20px;
+  }
+  .work-section .work h2 {
+    background-color: #036fda;
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    padding: 5px;
+  }
+  .work-section .work-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+    border-left: 3px solid #036fda;
+    padding-left: 20px;
+  }
+
+  .work-section .work-content .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+  }
+  .work-section .work-content .img-container img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .work-section .work-content .img-container .img-titles {
+    background-color: #33adff;
+    border-radius: 0px 0px 0px 0px;
+    padding: 10px;
+    width: 225px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+  }
+  .work-section .work-content .img-container .img-titles h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+  }
+  .work-section .work-content .img-container .img-titles p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+  }
+
+/** ---------------- Contact Section ---------------- **/
+.contact-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+}
+.contact-section .contact-title {
+  display: flexbox;
+  flex: 1;
+  width: 100%;
+  margin-right: 0px;
+  } 
+.contact-section .contact-title h2{
+  background-color: #036fda;
+  color: #fff;
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  padding: 7px;
+  width:100%
+}  
+.contact-section .contact-content {
+    flex: 2;
+    width: 100%;
+    /* border-left: 3px solid #036fda; */
+    height: auto;
+  } 
+  .contact-section .contact-content nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: #fff;
+    height: auto;
+    align-items: center;
+    align-content: center;
+  }
+  .contact-section .contact-content nav a {
+    color: #ee438b;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 2px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 5px;
+    padding: 12px;
+  }
+
+/** ---------------- FOOTER SECTION ----------------- **/
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    margin-top: 40px;
+}
+footer nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:center;
+    background-color: #036fda;
+    width: 100%;
+  }
+  footer nav a {
+    font-size: 18px;
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  /** header - Logo Section --------------------------- **/
+  body{
+    margin: 0px;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    width: 100%;
+}
+header{
+  display:inline-flex;
+  width: 700px;
+}
+header h1 {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  background-color: #33adff;
+  color: #fff;
+  height: 41px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  align-content: center;
+  flex-wrap: nowrap;
+  width: 150%;
+  padding-top: 8px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+/*  Uncomment code on index to use */
+header img {
+  display: flex;
+  justify-content: flex-end;
+  width: 50px;
+  height: auto;
+  margin: 5px;
+}
+/** Nav Bar ------------------------ **/
+nav {
+  display: flex;
+  background-color: #036fda;
+  height: 112px;
+  align-content: center;
+  width: 150%;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  }
+  
+  nav a {
+    font-size: 18px;
+    color: #fff;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 5px;
+  }
+
+/** Hero Section ------------------------ **/
+.hero {
+    display: flex;
+    background-size: cover;
+    width: 150%;
+    height: auto;
+}
+.hero img {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.hero h3 {
+    display: flex-end;
+    position: absolute;
+    top: 200px;
+    right: -50px;
+    /* left: 0px;; */
+    padding-left: 10px;
+    padding-top: 10px;
+    background-color: #70dbdb;
+    font-weight: 400;
+    font-size: 30px;
+    color: black;
+    height: 50px;
+    width: 350px;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+}
+/** About Section ---------------- **/
+  .resume-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 105%;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+  }
+  .resume-section .about-me {
+    display: inline-flex;
+    display: inline;
+    flex: 1;
+    width: 110%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  } 
+  .resume-section .about-me h2 {
+    background-color: #036fda;
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    padding: 5px;
+  }
+  .resume-section .about-me-content {
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+  }
+  .resume-section .about-me-content p {
+    color: #696969;
+    border-left: 3px solid #036fda;
+    height: auto;
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 25px;
+    text-align: justify;
+  }
+/** ---------------- Work Section ---------------- **/
+.work-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+}
+.work-section .work {
+  display: inline;
+  flex: 1;
+  width: 110%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  }
+  .work-section .work h2 {
+    background-color: #036fda;
+    color: #fff;
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    padding: 5px;
+    width: 110%;
+  }
+  .work-section .work-content {
+    display: flex;
+    flex: 2;
+    width: 90%;
+    margin-right: 20px;
+    border-left: 3px solid #036fda;
+    padding-left: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .work-section .work-content .img-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+  }
+  .work-section .work-content .img-container img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .work-section .work-content .img-container .img-titles {
+    background-color: #33adff;
+    border-radius: 0px 0px 0px 0px;
+    padding: 5px;
+    width: 161px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+  }
+  .work-section .work-content .img-container .img-titles h4 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+  }
+  .work-section .work-content .img-container .img-titles p {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+  }
+
+/** ---------------- Contact Section ---------------- **/
+.contact-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+.contact-section .contact-title {
+  display: flexbox;
+  flex: 1;
+  width: 110%;
+  margin-right: 0px;
+  } 
+.contact-section .contact-title h2{
+  background-color: #036fda;
+  color: #fff;
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  padding: 7px;
+  width:100%
+}  
+.contact-section .contact-content {
+    flex: 2;
+    width: 100%;
+    /* border-left: 3px solid #036fda; */
+    height: auto;
+    line-height: 10px;
+  } 
+  .contact-section .contact-content nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    width: auto;
+  }
+  .contact-section .contact-content nav a {
+    color: #ee438b;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #78b3cc;
+    text-underline-offset: 2px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 5px;
+    padding: 12px;
+  }
+
+/** ---------------- FOOTER SECTION ----------------- **/
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 110%;
+    height: 30px;
     margin-top: 20px;
 }
 footer nav {
-    font-size: 24px;
     display: flex;
-    background-color: #ee438b;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     align-items: center;
-    justify-content: flex-end;
-    height: 80px;
+    justify-content:center;
+    background-color: #036fda;
+    width: 100%;
   }
   footer nav a {
+    font-size: 18px;
     color: #fff;
     padding: 14px 20px;
     text-decoration: none;
@@ -283,47 +1135,5 @@ footer nav {
     text-decoration-thickness: 1px;
     text-decoration-color: #78b3cc;
     text-underline-offset: 5px;
-  }
-footer a {
-    color: #fff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-color: #78b3cc;
-    text-underline-offset: 5px;
-}
-
-@media screen and (max-width: 1024) {
-
-}
-  
-@media screen and (max-width: 768px) {
-  /* Use flex-direction to stack the navbar, sidebar, and body */
-  main,
-  nav {
-    flex-direction: column;
-  }
-  /* Change the header background */
-  header {
-    background: #fff;
-  }
-  /* Change the navbar and footer background */
-  nav,
-  footer {
-    background-color: #fff;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  
-}
-
-@media screen and (max-width: 375px) {
-  
-}
-
-@media screen and (max-width: 320px) {
-  
+  }  
 }
